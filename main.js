@@ -1,10 +1,10 @@
 const { createApp, ref, computed } = Vue;
 const app = createApp({
   setup() {
-    const cart = ref(0);
+    const cart = ref([]);
     const premium = ref(true);
-    function updateCart() {
-      cart.value += 1;
+    function updateCart(id) {
+      cart.value.push(id);
     }
 
     return {
@@ -14,7 +14,7 @@ const app = createApp({
     };
   },
 });
-
 app.component("product-display", productDisplay);
-
+app.component("review-form", reviewForm);
+app.component("review-list", reviewList);
 app.mount("#app");
