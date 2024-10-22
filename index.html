@@ -12,10 +12,14 @@
 
 <body>
     <div id="app">
-        <h1>Product goes here</h1>
+        <div class="nav-bar"></div>
+        <div class="cart">Cart({{ cart}})</div>
+           <product-display :premium="premium" @add-to-card="updateCart"></product-display>
+
     </div>
 
     <!-- Import Js -->
+      <script src="./components/ProductDisplay.js"></script>
     <script src="./main.js"></script>
 </body>
 
