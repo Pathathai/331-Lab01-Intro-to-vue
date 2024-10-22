@@ -14,13 +14,13 @@
     <div id="app">
         <div class="nav-bar"></div>
         <div class="cart">Cart({{ cart}})</div>
-           <product-display :premium="premium" @add-to-card="updateCart"></product-display>
-
-    </div>
-
-    <!-- Import Js -->
-      <script src="./components/ProductDisplay.js"></script>
-    <script src="./main.js"></script>
+         <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+</div>
+        <!-- Import Js -->
+        <script src="./components/ProductDisplay.js"></script>
+        <script src="./components/ReviewForm.js"></script>
+        <script src="./components/ReviewList.js"></script>
+        <script src="./main.js"></script>
 </body>
 
 </html>
